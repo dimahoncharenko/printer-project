@@ -27,9 +27,10 @@
     "wow.js": "^1.2.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:client": "react-scripts start",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:server": "npm start --prefix server",
     "build": "react-scripts build",
-    "poststart": "fastify start -l info ./server/app.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
