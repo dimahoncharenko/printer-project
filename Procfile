@@ -1,1 +1,1 @@
-worker: fastify start -l info ./server/app.js
+web: honcho -f ProcfileHoncho start
