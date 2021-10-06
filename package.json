@@ -24,12 +24,17 @@
     "typescript": "^4.4.3",
     "web-vitals": "^1.1.2",
     "wow.js": "^1.2.2",
-    "fastify-cli": "^2.13.0"
+    "fastify": "^3.0.0",
+    "fastify-autoload": "^3.3.1",
+    "fastify-cli": "^2.13.0",
+    "fastify-cors": "^6.0.2",
+    "fastify-plugin": "^3.0.0",
+    "fastify-sensible": "^3.1.0"
   },
   "scripts": {
     "start:client": "react-scripts start",
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
-    "start:server": "npm start --prefix server",
+    "start:server": "fastify start -l info ./server/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -49,6 +54,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@types/leaflet": "^1.7.5"
+    "@types/leaflet": "^1.7.5",
+    "tap": "^15.0.9"
   }
 }
