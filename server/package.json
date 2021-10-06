@@ -11,6 +11,9 @@
     "start": "fastify start -l info app.js",
     "dev": "fastify start -w -l info -P app.js"
   },
+  "engines": {
+    "node": "16.10.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
