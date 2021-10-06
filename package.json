@@ -13,6 +13,12 @@
     "@types/react-dom": "^17.0.9",
     "animate.css": "^4.1.1",
     "axios": "^0.21.4",
+    "fastify": "^3.0.0",
+    "fastify-autoload": "^3.3.1",
+    "fastify-cli": "^2.13.0",
+    "fastify-cors": "^6.0.2",
+    "fastify-plugin": "^3.0.0",
+    "fastify-sensible": "^3.1.0",
     "leaflet": "^1.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -23,13 +29,7 @@
     "screenfull": "^5.1.0",
     "typescript": "^4.4.3",
     "web-vitals": "^1.1.2",
-    "wow.js": "^1.2.2",
-    "fastify": "^3.0.0",
-    "fastify-autoload": "^3.3.1",
-    "fastify-cli": "^2.13.0",
-    "fastify-cors": "^6.0.2",
-    "fastify-plugin": "^3.0.0",
-    "fastify-sensible": "^3.1.0"
+    "wow.js": "^1.2.2"
   },
   "scripts": {
     "start:client": "react-scripts start",
@@ -55,6 +55,7 @@
   ],
   "devDependencies": {
     "@types/leaflet": "^1.7.5",
+    "concurrently": "^6.3.0",
     "tap": "^15.0.9"
   }
 }
