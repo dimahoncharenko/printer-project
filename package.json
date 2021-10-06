@@ -20,6 +20,7 @@
     "fastify-cors": "^6.0.2",
     "fastify-plugin": "^3.0.0",
     "fastify-sensible": "^3.1.0",
+    "foreman": "^3.0.1",
     "leaflet": "^1.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -34,7 +35,7 @@
   },
   "scripts": {
     "start:client": "react-scripts start",
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start": "npx nf start",
     "start:server": "fastify start -l info ./server/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
