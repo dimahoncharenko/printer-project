@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start:client": "react-scripts start",
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start": "react-scripts start && fastify start -l info ./server/app.js",
     "start:server": "fastify start -l info ./server/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
