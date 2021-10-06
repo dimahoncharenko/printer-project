@@ -1,1 +1,0 @@
-web: fastify start -l info ./server/app.js
