@@ -13,6 +13,7 @@
     "@types/react-dom": "^17.0.9",
     "animate.css": "^4.1.1",
     "axios": "^0.21.4",
+    "concurrently": "^6.3.0",
     "fastify": "^3.0.0",
     "fastify-autoload": "^3.3.1",
     "fastify-cli": "^2.13.0",
@@ -33,7 +34,7 @@
   },
   "scripts": {
     "start:client": "react-scripts start",
-    "start": "react-scripts start && fastify start -l info ./server/app.js",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:server": "fastify start -l info ./server/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -55,7 +56,6 @@
   ],
   "devDependencies": {
     "@types/leaflet": "^1.7.5",
-    "concurrently": "^6.3.0",
     "tap": "^15.0.9"
   }
 }
