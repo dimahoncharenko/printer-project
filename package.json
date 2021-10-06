@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start:client": "react-scripts start",
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start": "npm run start:client",
     "start:server": "npm start --prefix server",
     "build": "react-scripts build",
     "test": "react-scripts test",
