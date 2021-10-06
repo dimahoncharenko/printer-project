@@ -31,12 +31,11 @@
     "screenfull": "^5.1.0",
     "typescript": "^4.4.3",
     "web-vitals": "^1.1.2",
-    
     "wow.js": "^1.2.2"
   },
   "scripts": {
     "start:client": "react-scripts start",
-    "start": "npx nf start",
+    "start": "react-scripts start",
     "start:server": "fastify start -l info ./server/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
