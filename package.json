@@ -31,6 +31,7 @@
     "screenfull": "^5.1.0",
     "typescript": "^4.4.3",
     "web-vitals": "^1.1.2",
+    
     "wow.js": "^1.2.2"
   },
   "scripts": {
