@@ -241,4 +241,18 @@ module.exports = async function (fastify, opts) {
   fastify.get("/pricing", async (request, reply) => {
     return { pricing };
   });
+
+  fastify.get("/", async (request, reply) => {
+    return "Welcome to mock out api for printer project!";
+  });
+
+  const start = async () => {
+    try {
+      await fastify.listen(process.env.PORT || 4000)
+    } catch (err) {
+      fastify.log.error(err)
+      process.exit(1)
+    }
+  }
+  start()
 }
