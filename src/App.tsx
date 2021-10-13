@@ -132,7 +132,7 @@ const photos: Photo[] = [
 
   const pricing: PricingRow[] = [
     {
-      price: "17 880 грн.",
+      price: "18 942 грн.",
       link: "https://konotop.prom.ua/ua/p1440802220-bfp-epson-l8180.html?&primelead=MS4wMw",
       logoUrl: "https://konotop.prom.ua/cloud-cgi/static/uaprom-static/js/build/portal-portable/images/logo_prom-3K4N3.svg"
     },

@@ -96,7 +96,7 @@ const centres: Center[] = [
 const MapComponent = () => {
     return <MapContainer style={{ margin: "1em 0em" }} center={[50.4029068, 30.6261845]} zoom={11} scrollWheelZoom={false}>
     <TileLayer
-      // attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
 

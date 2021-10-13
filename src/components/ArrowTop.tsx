@@ -53,7 +53,7 @@ const ArrowTop = () => {
     }, []);
 
     return <div css={CSS} ref={arrowRef} className="to-home">
-        <a href="/#"><BsArrowUp style={{ fontSize: "1.5rem" }}/></a>
+        <a href="#header"><BsArrowUp style={{ fontSize: "1.5rem" }}/></a>
     </div>
 };
 

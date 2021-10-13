@@ -89,7 +89,7 @@ const CSS = css`
                 > li > a
                 {
                     display: block;
-                    padding: .2em .4em;
+                    padding: .4em .4em;
                     text-decoration: none;
                     color: white;
                     font-size: 1rem;
@@ -135,7 +135,7 @@ const CSS = css`
 const Header = () => {
     const [toggle, setToggle] = useState(false);
 
-    return <header css={CSS} className="header">
+    return <header css={CSS} className="header" id="header">
         <Wrapper>
             <div className="header__content"> 
                 <div className="logo">
