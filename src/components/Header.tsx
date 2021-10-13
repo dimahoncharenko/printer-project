@@ -4,6 +4,7 @@ import { jsx, css } from "@emotion/react";
 import { useState } from "react";
 
 import Wrapper from "./Wrapper";
+import logo from "../images/logo.webp";
 
 const CSS = css`
     background-color: orangered;
@@ -139,7 +140,7 @@ const Header = () => {
             <div className="header__content"> 
                 <div className="logo">
                     <a href="/">
-                        <img src="/images/logo.webp" width="80" alt="Logo"/>
+                        <img src={logo} width="80" alt="Logo"/>
                     </a>
                 </div>
                 <nav className={`nav ${toggle ? "is-open" : ""}`}>

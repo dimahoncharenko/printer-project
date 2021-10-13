@@ -10,7 +10,9 @@ import CharacteristicTable, { Row as CharacteristicRow } from "./components/Char
 import Tile from "./components/Tile";
 import PricingTable, { PricingRow } from "./components/PricingTable";
 import ToHome from "./components/ArrowTop";
- 
+
+import printer from "./images/printer.png";
+
 export type Photo = {
   img: string
   title: string
@@ -168,7 +170,7 @@ function App() {
             <h1>EcoTank L8180</h1>
             <p>Фотопринтер EcoTank формату A3+</p>
           </div>
-          <img src="/images/printer.png" alt=""/>
+          <img src={printer} alt=""/>
       </Hero>
       <ToHome/>
       <div id="review"></div>
