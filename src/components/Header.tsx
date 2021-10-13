@@ -32,7 +32,7 @@ const CSS = css`
                 width: 3em;
                 height: 3em;
                 overflow: hidden;
-                text-indent: -10em;
+                text-indent: -20em;
                 background-color: transparent;
                 position: relative;
                 cursor: pointer;
