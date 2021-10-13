@@ -36,6 +36,14 @@ const CSS = css`
             }
         }
 
+        .pricing-table__link
+        {
+            > a
+            {
+                word-break: break-all;
+            }
+        }
+
         .pricing-table__price
         {
             flex: 0.2;
