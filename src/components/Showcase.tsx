@@ -2,6 +2,13 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 
+import savemoney from "../images/save-money.jpg";
+import new_colour_system from "../images/new-colour-system.jpg";
+import flexibility from "../images/modern-flexibility.jpg";
+import media_compatibility from "../images/media-compatibility.jpg";
+import smart_panel from "../images/smart-panel.jpg";
+import heat_free from "../images/heat-free.jpg";
+
 const CSS = css`
 
 @media (min-width: 600px) {
@@ -64,30 +71,30 @@ const CSS = css`
 
     .save-money {
         grid-area: save;
-        background-image: url("/images/save-money.jpg");
+        background-image: url("${savemoney}");
     }
     .color-system {
         grid-area: color;
-        background-image: url("/images/new-colour-system.jpg");
+        background-image: url("${new_colour_system}");
         color: white;
     }
     .flexibility {
         grid-area: flexibility;
-        background-image: url("/images/modern-flexibility.jpg");
+        background-image: url("${flexibility}");
         color: white;
     }
     .compability {
         grid-area: compability;
-        background-image: url("/images/media-compatibility.jpg");
+        background-image: url("${media_compatibility}");
     }
     .smart-panel {
         grid-area: smart-panel;
-        background-image: url("/images/smart-panel.jpg");
+        background-image: url("${smart_panel}");
         color: white;
     }
     .heat-free {
         grid-area: heat-free;
-        background-image: url("/images/heat-free.jpg");
+        background-image: url("${heat_free}");
         color: white;
     }
 
