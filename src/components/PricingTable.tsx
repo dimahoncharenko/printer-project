@@ -3,20 +3,14 @@
 import { jsx, css } from "@emotion/react";
 import React from "react";
 
-import BaseTable, { TableHeader, TableRow } from "./BaseTable";
+import BaseTable, { TableRow } from "./BaseTable";
 
 const CSS = css`
-    .table__header
-    {
-        font-size: 1rem;
-
-        @media (min-width: 600px) {
-            font-size: 1.5rem;
-        }
-    }
+    padding: max(.5em, 2vw + .2em) 0em;
 
     .pricing-table__row 
     {
+        border-top: .05em solid var(--border-color);
         align-items: center;
 
         .pricing-table__logo
@@ -71,7 +65,7 @@ type Props = {
 const PricingTable = ({ pricingTable, header }: Props) => {
     return <div css={CSS} className="pricing-table">
         <BaseTable>
-            <TableHeader>{header}</TableHeader>
+            {/* <TableHeader>{header}</TableHeader> */}
             {pricingTable && pricingTable.map(({ logoUrl, link, price }, index) => {
                 return <TableRow rowName="pricing-table__row" key={index}>
                     <div className="pricing-table__logo"><img src={logoUrl} alt=""></img></div>
