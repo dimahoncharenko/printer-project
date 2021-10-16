@@ -22,7 +22,7 @@ const MapComponent = () => {
 
         getCenters()
             .then(data => setCentres(data.centres));
-    });
+    }, []);
 
     return <MapContainer style={{ margin: "1em 0em" }} center={[50.4029068, 30.6261845]} zoom={11} scrollWheelZoom={false}>
     <TileLayer
