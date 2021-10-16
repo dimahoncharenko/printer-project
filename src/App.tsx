@@ -16,14 +16,6 @@ import ToHome from "./components/ArrowTop";
 
 import printer from "./images/printer.png";
 
-import slide1 from "./images/slide1.jpg";
-import slide3 from "./images/slide3.jpg";
-import slide4 from "./images/slide4.jpg";
-import slide5 from "./images/slide5.jpg";
-import slide6 from "./images/slide6.jpg";
-import slide7 from "./images/slide7.jpg";
-import slide8 from "./images/slide8.jpg";
-
 export type Photo = {
   img: string
   title: string
@@ -58,14 +50,6 @@ function App() {
         setPricing(data[2].pricing);
       })
   }, []);
-
-  console.log(slide1);
-  console.log(slide3);
-  console.log(slide4);
-  console.log(slide5);
-  console.log(slide6);
-  console.log(slide7);
-  console.log(slide8);
 
   return (
     <div>
