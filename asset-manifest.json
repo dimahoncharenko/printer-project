@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/printer-project/static/css/main.668d5a7a.chunk.css",
-    "main.js": "/printer-project/static/js/main.67df3d68.chunk.js",
-    "main.js.map": "/printer-project/static/js/main.67df3d68.chunk.js.map",
+    "main.js": "/printer-project/static/js/main.4008bf3b.chunk.js",
+    "main.js.map": "/printer-project/static/js/main.4008bf3b.chunk.js.map",
     "runtime-main.js": "/printer-project/static/js/runtime-main.3b807187.js",
     "runtime-main.js.map": "/printer-project/static/js/runtime-main.3b807187.js.map",
-    "static/js/2.3644c628.chunk.js": "/printer-project/static/js/2.3644c628.chunk.js",
-    "static/js/2.3644c628.chunk.js.map": "/printer-project/static/js/2.3644c628.chunk.js.map",
+    "static/js/2.64c70a87.chunk.js": "/printer-project/static/js/2.64c70a87.chunk.js",
+    "static/js/2.64c70a87.chunk.js.map": "/printer-project/static/js/2.64c70a87.chunk.js.map",
     "index.html": "/printer-project/index.html",
     "static/css/main.668d5a7a.chunk.css.map": "/printer-project/static/css/main.668d5a7a.chunk.css.map",
-    "static/js/2.3644c628.chunk.js.LICENSE.txt": "/printer-project/static/js/2.3644c628.chunk.js.LICENSE.txt",
+    "static/js/2.64c70a87.chunk.js.LICENSE.txt": "/printer-project/static/js/2.64c70a87.chunk.js.LICENSE.txt",
     "static/media/heat-free.01f8613d.jpg": "/printer-project/static/media/heat-free.01f8613d.jpg",
     "static/media/hero.74988493.jpg": "/printer-project/static/media/hero.74988493.jpg",
     "static/media/logo.bf0610e0.webp": "/printer-project/static/media/logo.bf0610e0.webp",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3b807187.js",
-    "static/js/2.3644c628.chunk.js",
+    "static/js/2.64c70a87.chunk.js",
     "static/css/main.668d5a7a.chunk.css",
-    "static/js/main.67df3d68.chunk.js"
+    "static/js/main.4008bf3b.chunk.js"
   ]
 }
