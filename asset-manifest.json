@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/printer-project/static/css/main.668d5a7a.chunk.css",
-    "main.js": "/printer-project/static/js/main.006e4e29.chunk.js",
-    "main.js.map": "/printer-project/static/js/main.006e4e29.chunk.js.map",
+    "main.js": "/printer-project/static/js/main.67df3d68.chunk.js",
+    "main.js.map": "/printer-project/static/js/main.67df3d68.chunk.js.map",
     "runtime-main.js": "/printer-project/static/js/runtime-main.3b807187.js",
     "runtime-main.js.map": "/printer-project/static/js/runtime-main.3b807187.js.map",
-    "static/js/2.875294c8.chunk.js": "/printer-project/static/js/2.875294c8.chunk.js",
-    "static/js/2.875294c8.chunk.js.map": "/printer-project/static/js/2.875294c8.chunk.js.map",
+    "static/js/2.3644c628.chunk.js": "/printer-project/static/js/2.3644c628.chunk.js",
+    "static/js/2.3644c628.chunk.js.map": "/printer-project/static/js/2.3644c628.chunk.js.map",
     "index.html": "/printer-project/index.html",
     "static/css/main.668d5a7a.chunk.css.map": "/printer-project/static/css/main.668d5a7a.chunk.css.map",
-    "static/js/2.875294c8.chunk.js.LICENSE.txt": "/printer-project/static/js/2.875294c8.chunk.js.LICENSE.txt",
+    "static/js/2.3644c628.chunk.js.LICENSE.txt": "/printer-project/static/js/2.3644c628.chunk.js.LICENSE.txt",
     "static/media/heat-free.01f8613d.jpg": "/printer-project/static/media/heat-free.01f8613d.jpg",
     "static/media/hero.74988493.jpg": "/printer-project/static/media/hero.74988493.jpg",
     "static/media/logo.bf0610e0.webp": "/printer-project/static/media/logo.bf0610e0.webp",
@@ -18,19 +18,12 @@
     "static/media/new-colour-system.f4dd04cf.jpg": "/printer-project/static/media/new-colour-system.f4dd04cf.jpg",
     "static/media/printer.afba5d08.png": "/printer-project/static/media/printer.afba5d08.png",
     "static/media/save-money.3a5a6963.jpg": "/printer-project/static/media/save-money.3a5a6963.jpg",
-    "static/media/slide1.099e18fa.jpg": "/printer-project/static/media/slide1.099e18fa.jpg",
-    "static/media/slide3.64612558.jpg": "/printer-project/static/media/slide3.64612558.jpg",
-    "static/media/slide4.1fa3613b.jpg": "/printer-project/static/media/slide4.1fa3613b.jpg",
-    "static/media/slide5.cbbe21ef.jpg": "/printer-project/static/media/slide5.cbbe21ef.jpg",
-    "static/media/slide6.fdf5939d.jpg": "/printer-project/static/media/slide6.fdf5939d.jpg",
-    "static/media/slide7.fa943ace.jpg": "/printer-project/static/media/slide7.fa943ace.jpg",
-    "static/media/slide8.0500c5c5.jpg": "/printer-project/static/media/slide8.0500c5c5.jpg",
     "static/media/smart-panel.e7404163.jpg": "/printer-project/static/media/smart-panel.e7404163.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.3b807187.js",
-    "static/js/2.875294c8.chunk.js",
+    "static/js/2.3644c628.chunk.js",
     "static/css/main.668d5a7a.chunk.css",
-    "static/js/main.006e4e29.chunk.js"
+    "static/js/main.67df3d68.chunk.js"
   ]
 }
