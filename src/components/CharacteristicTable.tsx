@@ -10,7 +10,7 @@ type Props = {
     table: Row[]
 }
 
-const CharacteristicTable = ({ table }: Props) => {
+const CharacteristicTable = ({ table = [] }: Props) => {
     return <BaseTable>
         {table && table.map((row, i) => {
             return <Fragment key={i}>
