@@ -1,10 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, css } from "@emotion/react";
+import { jsx, css, SerializedStyles } from "@emotion/react";
 import React from "react";
 
 type Props = {
-    css?: React.CSSProperties
+    customStyles?: SerializedStyles
     children?: React.ReactNode
 };
 
@@ -18,12 +18,12 @@ const CSS = css`
         font-size: 1rem;
 
         @media (min-width: 600px) {
-            fontSize: 1.4rem;
+            font-size: 1.4rem;
         }
 `;
 
-const Tile = ({ children, css }: Props) => {
-    return <div css={CSS} style={css} className="tile">
+const Tile = ({ children, customStyles }: Props) => {
+    return <div css={[CSS, customStyles]} className="tile">
         {children}
     </div>
 };

@@ -4,7 +4,6 @@ import fetch from "axios";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Showcase from "./components/Showcase";
-import Player from "./components/Player";
 import Wrapper from "./components/Wrapper";
 import PhotoGallery from "./components/PhotoGallery";
 import MapContainer from "./components/MapContainer";
@@ -15,6 +14,8 @@ import PricingTable, { PricingRow } from "./components/PricingTable";
 import ToHome from "./components/ArrowTop";
 
 import printer from "./images/printer.png";
+
+import MediaSection from "./components/MediaSection";
 
 export type Photo = {
   img: string
@@ -70,14 +71,7 @@ function App() {
       <div id="abilities"></div>
       <Tile><h2>Можливості</h2></Tile>
       <Showcase/>
-      <div style={{ marginTop: "1em" }} id="media"></div>
-      <Tile><h2>Медіа</h2></Tile>
-      <Wrapper>
-        <Player title="ECOTANK L8180" url="printer-showcase.mp4"/>
-      </Wrapper>
-      <Wrapper>
-        <Player title="ECOTANK L8180" url="test.mp4" />
-      </Wrapper>
+      <MediaSection />
       <div id="characteristics"></div>
       <Tile><h2>Характеристики</h2></Tile>
       <Wrapper>

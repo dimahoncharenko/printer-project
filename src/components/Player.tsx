@@ -130,32 +130,6 @@ const Player = ({
     const formatedDuration = format(duration);
     const formatedCurrentTime = format(currentTime);
 
-    // const onBookMark = useCallback(() => {
-    //     if (canvasRef.current) {
-    //         const canvas = canvasRef.current;
-    //         canvas.width = 350;
-    //         canvas.height = 200;
-
-    //         const ctx = canvas.getContext("2d");
-
-    //         if (ctx && playerRef.current) {
-    //             ctx.drawImage(playerRef.current.getInternalPlayer() as CanvasImageSource, 0, 0, canvas.width, canvas.height);
-    //         }
-
-    //         const imageUrl = canvas.toDataURL();
-    //         canvas.width = 0;
-    //         canvas.height = 0;
-
-    //         setState(state => ({ ...state, bookmarks: [...state.bookmarks, { 
-    //                 currentTime, 
-    //                 display: `${formatedCurrentTime}`,
-    //                 img: imageUrl
-    //             }] 
-    //         }));
-    //     }
-    // }, [formatedCurrentTime, currentTime]);
-
-
     return <div className="player wow animate__animated animate__backInUp" ref={playerWrapperRef} css={CSS}>
         <ReactPlayer 
             url={url}
