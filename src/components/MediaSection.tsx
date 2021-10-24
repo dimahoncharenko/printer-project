@@ -9,13 +9,13 @@ import Tile from "./Tile";
 import Line, { useCurrent } from "./Line";
 
 const Refillment = lazy(() => import("./Players/Refillment"));
-const Testing = lazy(() => import("./Players/Testing"));
+const Cleaning = lazy(() => import("./Players/Cleaning"));
 const Showcase = lazy(() => import("./Players/Showcase"));
 
 const categories = [
     { index: 1, title: "Огляд" },
     { index: 2, title: "Заправка" },
-    { index: 3, title: "Тестування" },
+    { index: 3, title: "Чистка друкуючої головки" },
 ];
 
 const MediaSection = () => {
@@ -26,7 +26,7 @@ const MediaSection = () => {
             case 2:
                 return <Refillment />
             case 3:
-                return <Testing />
+                return <Cleaning />
             default:
                 return <Showcase />
         }
