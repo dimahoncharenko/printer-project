@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import React from "react";
-import hero from "../images/hero.jpg";
 import Wrapper from "./Wrapper";
 
 type Props = {
@@ -20,7 +19,7 @@ function Hero({ children }: Props) {
 };  
 
 const CSS = css`
-    background-image: url("${hero}");
+    background-image: url("https://i.ibb.co/8mThzjn/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: gray;

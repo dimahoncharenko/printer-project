@@ -2,13 +2,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 
-import savemoney from "../images/save-money.jpg";
-import new_colour_system from "../images/new-colour-system.jpg";
-import flexibility from "../images/modern-flexibility.jpg";
-import media_compatibility from "../images/media-compatibility.jpg";
-import smart_panel from "../images/smart-panel.jpg";
-import heat_free from "../images/heat-free.jpg";
-
 const CSS = css`
 
 @media (min-width: 600px) {
@@ -32,6 +25,7 @@ const CSS = css`
         justify-content: center;
         flex-direction: column;
         height: 300px;
+        background-size: cover;
 
         @media (min-width: 600px) {
             height: 100%;
@@ -71,30 +65,30 @@ const CSS = css`
 
     .save-money {
         grid-area: save;
-        background-image: url("${savemoney}");
+        background-image: url("https://i.ibb.co/8bvNy8q/save-money.jpg");
     }
     .color-system {
         grid-area: color;
-        background-image: url("${new_colour_system}");
+        background-image: url("https://i.ibb.co/cggvMjD/new-colour-system.jpg");
         color: white;
     }
     .flexibility {
         grid-area: flexibility;
-        background-image: url("${flexibility}");
+        background-image: url("https://i.ibb.co/3dXw9M2/modern-flexibility.jpg");
         color: white;
     }
     .compability {
         grid-area: compability;
-        background-image: url("${media_compatibility}");
+        background-image: url("https://i.ibb.co/fNy0vMR/media-compatibility.jpg");
     }
     .smart-panel {
         grid-area: smart-panel;
-        background-image: url("${smart_panel}");
+        background-image: url("https://i.ibb.co/P6LBttv/smart-panel.jpg");
         color: white;
     }
     .heat-free {
         grid-area: heat-free;
-        background-image: url("${heat_free}");
+        background-image: url("https://i.ibb.co/1ZnkDdP/heat-free.jpg");
         color: white;
     }
 

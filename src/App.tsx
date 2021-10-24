@@ -13,8 +13,6 @@ import Tile from "./components/Tile";
 import { PricingRow } from "./components/PricingTable";
 import ToHome from "./components/ArrowTop";
 
-import printer from "./images/printer.png";
-
 import MediaSection from "./components/MediaSection";
 import DealerSection from "./components/DealerSection";
 
@@ -63,7 +61,7 @@ function App() {
             <h1>EcoTank L8180</h1>
             <p>Фотопринтер EcoTank формату A3+</p>
           </div>
-          <img src={printer} alt=""/>
+          <img src="https://i.ibb.co/fnkK9Y5/printer.png" alt=""/>
       </Hero>
       <ToHome/>
       <div id="review"></div>
