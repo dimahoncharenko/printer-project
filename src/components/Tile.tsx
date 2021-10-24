@@ -18,7 +18,7 @@ const CSS = css`
         font-size: 1rem;
 
         @media (min-width: 600px) {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 `;
 
