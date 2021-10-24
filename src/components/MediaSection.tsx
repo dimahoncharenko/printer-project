@@ -1,10 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, Suspense, lazy } from "react";
 import { jsx, css } from "@emotion/react";
 
 import Wrapper from "./Wrapper";
-import Player from "./Player";
 import Tile from "./Tile";
 
 const tileStyles = css`
@@ -40,6 +39,10 @@ const tileStyles = css`
     }
 `;
 
+const Refillment = lazy(() => import("./Players/Refillment"));
+const Testing = lazy(() => import("./Players/Testing"));
+const Showcase = lazy(() => import("./Players/Showcase"));
+
 const categories = [
     { index: 1, title: "Огляд" },
     { index: 2, title: "Заправка" },
@@ -52,11 +55,11 @@ const MediaSection = () => {
     const renderPlayer = useCallback((index: number) => {
         switch(index) {
             case 2:
-                return <Player title="Перезаправка чорнилами Epson" url="refillment.mp4" />
+                return <Refillment />
             case 3:
-                return <Player title="Тестування L3256 та M2140" url="test.mp4" />
+                return <Testing />
             default:
-                return <Player title="Обзор EcoTank L8180" url="printer-showcase.mp4" />
+                return <Showcase />
         }
     }, []);
 
@@ -77,7 +80,9 @@ const MediaSection = () => {
                 </div>
             </Tile>
             <Wrapper>
-                {renderPlayer(current)}
+                <Suspense fallback={<div css={css`text-align: center;`}>Loading...</div>}>
+                    {renderPlayer(current)}
+                </Suspense>
             </Wrapper>
         </React.Fragment>
     );

@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import React, { useState, useCallback, useRef, ChangeEvent, MouseEvent } from "react";
-import ReactPlayer, { ReactPlayerProps } from "react-player";
+import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
 import { jsx, css } from "@emotion/react";
 import screenfull from "screenfull";
 
