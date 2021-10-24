@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import React, { useState, useCallback, Suspense, lazy } from "react";
 import { jsx, css } from "@emotion/react";
+import Loader from "react-loader-spinner";
 
 import Wrapper from "./Wrapper";
 import Tile from "./Tile";
@@ -13,7 +14,7 @@ const tileStyles = css`
     .line
     {
         display: flex;
-        width: min(50em, 100vw - 2em);
+        width: min(1120px, 100vw);
         justify-content: space-between;
 
         > div
@@ -80,7 +81,7 @@ const MediaSection = () => {
                 </div>
             </Tile>
             <Wrapper>
-                <Suspense fallback={<div css={css`text-align: center;`}>Loading...</div>}>
+                <Suspense fallback={<div css={css`display: flex; justify-content: center;`}><Loader color="gray" timeout={1000} type="ThreeDots" /></div>}>
                     {renderPlayer(current)}
                 </Suspense>
             </Wrapper>
