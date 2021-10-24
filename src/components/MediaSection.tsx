@@ -1,44 +1,12 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useState, useCallback, Suspense, lazy } from "react";
+import React, { useCallback, Suspense, lazy } from "react";
 import { jsx, css } from "@emotion/react";
 import Loader from "react-loader-spinner";
 
 import Wrapper from "./Wrapper";
 import Tile from "./Tile";
-
-const tileStyles = css`
-    background-color: lightgray;
-    padding: 0;
-
-    .line
-    {
-        display: flex;
-        width: min(1120px, 100vw);
-        justify-content: space-between;
-
-        > div
-        {
-            flex: 1;
-            text-align: center;
-            cursor: pointer;
-            padding: 1em;
-            text-shadow: 0em 0em .2em gray;
-            text-transform: uppercase;
-            font-weight: bolder;
-
-            &:hover
-            {
-                background-color: #999999;
-            }
-
-            &.active
-            {
-                background-color: #999999; 
-            }
-        }
-    }
-`;
+import Line, { useCurrent } from "./Line";
 
 const Refillment = lazy(() => import("./Players/Refillment"));
 const Testing = lazy(() => import("./Players/Testing"));
@@ -47,11 +15,11 @@ const Showcase = lazy(() => import("./Players/Showcase"));
 const categories = [
     { index: 1, title: "Огляд" },
     { index: 2, title: "Заправка" },
-    { index: 3, title: "Тест" },
+    { index: 3, title: "Тестування" },
 ];
 
 const MediaSection = () => {
-    const [current, setCurrent] = useState(1);
+    const { state, changeCurrent } = useCurrent();
 
     const renderPlayer = useCallback((index: number) => {
         switch(index) {
@@ -68,21 +36,19 @@ const MediaSection = () => {
         <React.Fragment>
             <div style={{ marginTop: "1em" }} id="media"></div>
             <Tile><h2>Медіа</h2></Tile>
-            <Tile customStyles={tileStyles}>
-                <div className="line">
-                    {categories.map(({ index, title }) => <div 
-                            className={current === index ? "active" : ""}
-                            key={index}
-                            onClick={setCurrent.bind(null, index)}
+            <Line>
+                {categories.map(({ index, title }) => <div 
+                    className={state === index ? "active" : ""}
+                    key={index}
+                    onClick={changeCurrent.bind(null, index)}
                         >
                             {title}
-                        </div>
-                    )}
-                </div>
-            </Tile>
+                    </div>
+                )}
+            </Line>
             <Wrapper>
                 <Suspense fallback={<div css={css`display: flex; justify-content: center;`}><Loader color="gray" timeout={1000} type="ThreeDots" /></div>}>
-                    {renderPlayer(current)}
+                    {renderPlayer(state)}
                 </Suspense>
             </Wrapper>
         </React.Fragment>

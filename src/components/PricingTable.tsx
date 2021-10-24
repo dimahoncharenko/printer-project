@@ -59,13 +59,11 @@ export type PricingRow = {
 
 type Props = {
     pricingTable: PricingRow[]
-    header: string
 }
 
-const PricingTable = ({ pricingTable, header }: Props) => {
+const PricingTable = ({ pricingTable }: Props) => {
     return <div css={CSS} className="pricing-table">
         <BaseTable>
-            {/* <TableHeader>{header}</TableHeader> */}
             {pricingTable && pricingTable.map(({ logoUrl, link, price }, index) => {
                 return <TableRow rowName="pricing-table__row" key={index}>
                     <div className="pricing-table__logo"><img src={logoUrl} alt=""></img></div>

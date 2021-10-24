@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import fetch from "axios";
 
 import Header from "./components/Header";
@@ -10,12 +10,13 @@ import MapContainer from "./components/MapContainer";
 import Footer from "./components/Footer";
 import CharacteristicTable, { Row as CharacteristicRow } from "./components/CharacteristicTable";
 import Tile from "./components/Tile";
-import PricingTable, { PricingRow } from "./components/PricingTable";
+import { PricingRow } from "./components/PricingTable";
 import ToHome from "./components/ArrowTop";
 
 import printer from "./images/printer.png";
 
 import MediaSection from "./components/MediaSection";
+import DealerSection from "./components/DealerSection";
 
 export type Photo = {
   img: string
@@ -26,7 +27,8 @@ export type Photo = {
 function App() {
   const [ photos, setPhotos ] = useState<Photo[]>([]);
   const [ characteristics, setCharacteristics ] = useState<CharacteristicRow[]>([]);
-  const [ pricing, setPricing ] = useState<PricingRow[]>([]);
+  const [ printerPricing, setPrinterPricing ] = useState<PricingRow[]>([]);
+  const [ inksPricing, setInksPricing ] = useState<PricingRow[]>([]);
 
   useEffect(() => {
     async function getData() {
@@ -48,7 +50,8 @@ function App() {
       .then(data => {
         setPhotos(data[0].photos);
         setCharacteristics(data[1].characteristics);
-        setPricing(data[2].pricing);
+        setPrinterPricing(data[2].pricing.printer);
+        setInksPricing(data[2].pricing.inks);
       })
   }, []);
 
@@ -77,11 +80,7 @@ function App() {
       <Wrapper>
         <CharacteristicTable table={characteristics}/>
       </Wrapper>
-      <div id="dillers"></div>
-      <Tile><h2>Дилери</h2></Tile>
-      <Wrapper>
-        <PricingTable header="Дилери" pricingTable={pricing}/>
-      </Wrapper>
+      <DealerSection printerPricing={printerPricing} inksPricing={inksPricing}/>
       <div id="service-centres"></div>
       <Tile><h2>Сервісні центри в Києві</h2></Tile>
       <Wrapper>

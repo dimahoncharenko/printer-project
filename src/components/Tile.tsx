@@ -4,7 +4,7 @@ import { jsx, css, SerializedStyles } from "@emotion/react";
 import React from "react";
 
 type Props = {
-    customStyles?: SerializedStyles
+    customStyles?: SerializedStyles[]
     children?: React.ReactNode
 };
 
@@ -22,8 +22,8 @@ const CSS = css`
         }
 `;
 
-const Tile = ({ children, customStyles }: Props) => {
-    return <div css={[CSS, customStyles]} className="tile">
+const Tile = ({ children, customStyles = [] }: Props) => {
+    return <div css={[CSS, ...customStyles]} className="tile">
         {children}
     </div>
 };
