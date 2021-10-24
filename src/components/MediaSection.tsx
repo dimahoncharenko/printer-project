@@ -52,11 +52,11 @@ const MediaSection = () => {
     const renderPlayer = useCallback((index: number) => {
         switch(index) {
             case 2:
-                return <Player title="REFILLMENT ECOTANK" url="refillment.mp4" />
+                return <Player title="Перезаправка чорнилами Epson" url="refillment.mp4" />
             case 3:
-                return <Player title="TEST ECOTANK" url="test.mp4" />
+                return <Player title="Тестування L3256 та M2140" url="test.mp4" />
             default:
-                return <Player title="ECOTANK L8180" url="printer-showcase.mp4" />
+                return <Player title="Обзор EcoTank L8180" url="printer-showcase.mp4" />
         }
     }, []);
 
