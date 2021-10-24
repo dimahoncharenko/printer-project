@@ -73,7 +73,10 @@ function App() {
       <div style={{ marginTop: "1em" }} id="media"></div>
       <Tile><h2>Медіа</h2></Tile>
       <Wrapper>
-        <Player title="ECOTANK L8180" />
+        <Player title="ECOTANK L8180" url="printer-showcase.mp4"/>
+      </Wrapper>
+      <Wrapper>
+        <Player title="ECOTANK L8180" url="test.mp4" />
       </Wrapper>
       <div id="characteristics"></div>
       <Tile><h2>Характеристики</h2></Tile>

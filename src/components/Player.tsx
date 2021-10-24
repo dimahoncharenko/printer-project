@@ -23,12 +23,14 @@ type State = {
 
 type Props = {
     title: string
+    url: string
 }
 
 let count = 0;
 
 const Player = ({
-    title
+    title,
+    url
 }: Props) => {
     const [state, setState] = useState<State>({
         playing: false,
@@ -156,7 +158,7 @@ const Player = ({
 
     return <div className="player wow animate__animated animate__backInUp" ref={playerWrapperRef} css={CSS}>
         <ReactPlayer 
-            url="printer-showcase.mp4"
+            url={url}
             ref={playerRef}
             width="100%"
             height="100%"
