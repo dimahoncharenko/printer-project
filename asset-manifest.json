@@ -3,8 +3,8 @@
     "static/js/0.d0ac1c09.chunk.js": "/printer-project/static/js/0.d0ac1c09.chunk.js",
     "static/js/0.d0ac1c09.chunk.js.map": "/printer-project/static/js/0.d0ac1c09.chunk.js.map",
     "main.css": "/printer-project/static/css/main.d0420413.chunk.css",
-    "main.js": "/printer-project/static/js/main.c8625859.chunk.js",
-    "main.js.map": "/printer-project/static/js/main.c8625859.chunk.js.map",
+    "main.js": "/printer-project/static/js/main.b0123baa.chunk.js",
+    "main.js.map": "/printer-project/static/js/main.b0123baa.chunk.js.map",
     "reactPlayerDailyMotion.js": "/printer-project/static/js/reactPlayerDailyMotion.db7ebcb5.chunk.js",
     "reactPlayerDailyMotion.js.map": "/printer-project/static/js/reactPlayerDailyMotion.db7ebcb5.chunk.js.map",
     "reactPlayerFacebook.js": "/printer-project/static/js/reactPlayerFacebook.85af7a0a.chunk.js",
@@ -31,16 +31,16 @@
     "reactPlayerWistia.js.map": "/printer-project/static/js/reactPlayerWistia.6f9db38c.chunk.js.map",
     "reactPlayerYouTube.js": "/printer-project/static/js/reactPlayerYouTube.430f0555.chunk.js",
     "reactPlayerYouTube.js.map": "/printer-project/static/js/reactPlayerYouTube.430f0555.chunk.js.map",
-    "runtime-main.js": "/printer-project/static/js/runtime-main.21a9ae45.js",
-    "runtime-main.js.map": "/printer-project/static/js/runtime-main.21a9ae45.js.map",
+    "runtime-main.js": "/printer-project/static/js/runtime-main.6a537e3e.js",
+    "runtime-main.js.map": "/printer-project/static/js/runtime-main.6a537e3e.js.map",
     "static/js/16.753b9464.chunk.js": "/printer-project/static/js/16.753b9464.chunk.js",
     "static/js/16.753b9464.chunk.js.map": "/printer-project/static/js/16.753b9464.chunk.js.map",
-    "static/js/17.aa060802.chunk.js": "/printer-project/static/js/17.aa060802.chunk.js",
-    "static/js/17.aa060802.chunk.js.map": "/printer-project/static/js/17.aa060802.chunk.js.map",
-    "static/js/18.eb5e68d4.chunk.js": "/printer-project/static/js/18.eb5e68d4.chunk.js",
-    "static/js/18.eb5e68d4.chunk.js.map": "/printer-project/static/js/18.eb5e68d4.chunk.js.map",
-    "static/js/19.5dc012d3.chunk.js": "/printer-project/static/js/19.5dc012d3.chunk.js",
-    "static/js/19.5dc012d3.chunk.js.map": "/printer-project/static/js/19.5dc012d3.chunk.js.map",
+    "static/js/17.1effda26.chunk.js": "/printer-project/static/js/17.1effda26.chunk.js",
+    "static/js/17.1effda26.chunk.js.map": "/printer-project/static/js/17.1effda26.chunk.js.map",
+    "static/js/18.85471093.chunk.js": "/printer-project/static/js/18.85471093.chunk.js",
+    "static/js/18.85471093.chunk.js.map": "/printer-project/static/js/18.85471093.chunk.js.map",
+    "static/js/19.0c885983.chunk.js": "/printer-project/static/js/19.0c885983.chunk.js",
+    "static/js/19.0c885983.chunk.js.map": "/printer-project/static/js/19.0c885983.chunk.js.map",
     "static/js/20.4fa8741a.chunk.js": "/printer-project/static/js/20.4fa8741a.chunk.js",
     "static/js/20.4fa8741a.chunk.js.map": "/printer-project/static/js/20.4fa8741a.chunk.js.map",
     "static/js/21.dbee5984.chunk.js": "/printer-project/static/js/21.dbee5984.chunk.js",
@@ -59,9 +59,9 @@
     "static/media/smart-panel.e7404163.jpg": "/printer-project/static/media/smart-panel.e7404163.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.21a9ae45.js",
+    "static/js/runtime-main.6a537e3e.js",
     "static/js/16.753b9464.chunk.js",
     "static/css/main.d0420413.chunk.css",
-    "static/js/main.c8625859.chunk.js"
+    "static/js/main.b0123baa.chunk.js"
   ]
 }
