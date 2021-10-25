@@ -5,6 +5,7 @@ import { jsx, css } from "@emotion/react";
 import { HiPause, HiPlay, HiRewind, HiFastForward } from "react-icons/hi";
 import { FiVolume1, FiVolume2, FiVolumeX } from "react-icons/fi";
 import { AiOutlineFullscreen } from "react-icons/ai";
+import { IoSettingsOutline } from "react-icons/io5"; 
 
 const CSS = css`
     display: flex;
@@ -123,14 +124,14 @@ const CSS = css`
         > .seekbar
         {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
             width: 100%;
             height: 100%;
 
             > .seekbar__range
             {
-                width: 80%;
+                width: calc(100% - 12em);
                 cursor: pointer;
             }
 
@@ -138,11 +139,60 @@ const CSS = css`
             {
                 color: white;
                 font-size: .6rem;
+                margin-left: -1em;
 
                 @media (min-width: 600px) {
                     font-size: 1rem;
                 }
             }
+        }
+
+        > .playback-rate
+        {
+            position: relative;
+            font-size: 1.1rem;
+            margin-left: -1.8em;
+            margin-bottom: -.4em;
+
+            > .playback-rate__options
+            {
+                display: none;
+                position: absolute;
+                bottom: 1.5em;
+                left: calc(50% - 1em);
+
+                > div
+                {
+                    background-color: white;
+                    color: black;
+                    padding: .5em;
+                    font-size: clamp(.7rem, 2vw + .1em, 1rem);
+
+                    &:hover
+                    {
+                        background-color: #898989;
+                    }
+
+                    &.active
+                    {
+                        background-color: #898989;
+                    }
+                }
+            }
+
+            &:focus
+            {
+                > svg
+                {
+                    transform: rotate(45deg);
+                    transition: transform .3s linear;
+                }
+
+                > .playback-rate__options
+                {
+                    display: block;
+                }
+            } 
         }
     }
 `;
@@ -165,11 +215,14 @@ type Props = {
     rewindPlayer: MouseEventHandler<HTMLButtonElement>
     forwardPlayer: MouseEventHandler<HTMLButtonElement>
     toggleFullScreen: MouseEventHandler<HTMLButtonElement>
+    changeRate: (rate: number) => any
+    playbackRate: number
 }
 
 const PlayerControls = ({ 
         togglePlay, isPlaying, muted, volume, toggleMute, setVolume, duration, played, onChange, onMouseDown, 
-        onMouseUp, displayTime, title, onMouseOver, rewindPlayer, forwardPlayer, toggleFullScreen
+        onMouseUp, displayTime, title, onMouseOver, rewindPlayer, forwardPlayer, toggleFullScreen, changeRate,
+        playbackRate
     }: Props, ref: ForwardedRef<HTMLDivElement>) => {
     return <Fragment>
         <div 
@@ -234,6 +287,21 @@ const PlayerControls = ({
                     />
                     <span className="seekbar__display-time">{displayTime}</span>
                 </div>
+
+                <button className="playback-rate active">
+                    <IoSettingsOutline/>
+                    <div className="playback-rate__options">
+                        {[2.0, 1.5, 1.0, 0.5].map((rate, index) => {
+                            return <div 
+                                key={index} 
+                                className={`${rate === playbackRate ? "active" : ""}`}
+                                onClick={changeRate.bind(null, rate)}
+                            >
+                                {rate.toFixed(1)}
+                            </div>
+                        })}
+                    </div>
+                </button>
 
                 <button className="fullscreen" onClick={toggleFullScreen}>
                     <AiOutlineFullscreen/>

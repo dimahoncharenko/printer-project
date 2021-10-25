@@ -124,7 +124,7 @@ const Showcase = () => {
                     <h3>Нова 6-кольорова чорнильна система</h3>
                     <p>
                         Фарби Epson Claria ET Premium виробляють високоякісні, тривалі фотографії без кордонів розміром до A3+. 
-                        Чорне фото та нові фото-сірі фарби дозволяють легко досягти видатних чорно-білих фотографій, тоді як 
+                        Нові фото-чорні та фото-сірі фарби дозволяють легко досягти видатних чорно-білих фотографій, тоді як 
                         пігментна чорна фарба забезпечує чіткий текст при друку двосторонніх документів на звичайному папері, 
                         що робить цей принтер фантастичним вибором для кожного завдання у вашому домі.                                                  
                     </p>
@@ -133,7 +133,7 @@ const Showcase = () => {
                 <div className="showcase__item black wow animate__animated animate__backInUp">
                     <h3>Сучасна гнучкість</h3>
                     <p>
-                        Принтер для сучасного користувача EcoTank L8180 дозволяє друкувати, сканувати та більше безпосередньо з телефону або планшета за допомогою програми Epson Smart Panel                                                               
+                        Принтер для сучасного користувача EcoTank L8180 дозволяє друкувати, сканувати та більше, безпосередньо з телефону або планшета за допомогою програми Epson Smart Panel.                                                               
                     </p>
                 </div>
                 <div className="showcase__item flexibility wow animate__animated animate__backInUp"></div>
@@ -151,7 +151,7 @@ const Showcase = () => {
                 <div className="showcase__item wow animate__animated animate__backInUp">
                     <h3>Додаток Epson Smart Panel</h3>
                     <p>
-                    Додаток Epson Smart Panel дозволяє керувати принтером зі свого смартфона або планшета
+                    Додаток Epson Smart Panel дозволяє керувати принтером зі свого смартфона або планшета.
                     </p>
                 </div>
                 <div className="showcase__item smart-panel wow animate__animated animate__backInUp"></div>

@@ -19,6 +19,7 @@ type State = {
     played: number
     seeking: boolean
     bookmarks: TBookmark[]
+    rate: number
 }
 
 type Props = {
@@ -38,7 +39,8 @@ const Player = ({
         muted: false,
         played: 0,
         seeking: false,
-        bookmarks: []
+        bookmarks: [],
+        rate: 1.0
     });
 
     const playerRef = useRef<ReactPlayer>(null); 
@@ -123,6 +125,10 @@ const Player = ({
         }
     }, []);
 
+    const changeRate = useCallback((rate: number) => {
+        setState(state => ({ ...state, rate }));
+    }, []);
+
     
     const duration = playerRef.current ? playerRef.current.getDuration() : 0;
     const currentTime = playerRef.current ? playerRef.current.getCurrentTime() : 0;
@@ -135,6 +141,7 @@ const Player = ({
             url={url}
             ref={playerRef}
             width="100%"
+            playbackRate={state.rate}
             height="100%"
             playing={state.playing}
             volume={state.volume}
@@ -168,6 +175,8 @@ const Player = ({
             rewindPlayer={rewindPlayer}
             forwardPlayer={forwardPlayer}
             toggleFullScreen={toggleFullScreen}
+            changeRate={changeRate}
+            playbackRate={state.rate}
         />
 
         <div style={{display: "flex", position: "absolute", overflow: "hidden", width: "100%"}}>
