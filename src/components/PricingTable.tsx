@@ -27,6 +27,7 @@ const CSS = css`
             > img
             {
                 max-width: 80%;
+                filter: drop-shadow(0em 0em .04em gray);
             }
         }
 
