@@ -64,7 +64,7 @@ const Player = ({
         if (controlsRef.current) {
             let range = controlsRef.current.querySelector<HTMLInputElement>(".seekbar__range");
 
-            console.log(currentState.played);
+            console.log(currentState);
 
             range?.style.setProperty("--before-width", currentState.played + "%");
         }
