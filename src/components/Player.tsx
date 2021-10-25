@@ -64,9 +64,7 @@ const Player = ({
         if (controlsRef.current) {
             let range = controlsRef.current.querySelector<HTMLInputElement>(".seekbar__range");
 
-            console.log(currentState);
-
-            range?.style.setProperty("--before-width", currentState.played + "%");
+            range?.style.setProperty("--before-width", (+currentState.played * 50) + "%");
         }
 
         if (count > 3 && controlsRef.current) {
