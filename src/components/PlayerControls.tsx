@@ -131,44 +131,8 @@ const CSS = css`
 
             > .seekbar__range
             {
-                --before-width: 0%;
-
-                position: relative;
-                width: calc(100% - 12em);
-                cursor: pointer;
-                appearance: none;
-                background-color: white;
-                border-radius: 1em;
-                height: .5em;
-
-                &::before
-                {
-                    content: " ";
-                    position: absolute;
-                    width: var(--before-width);
-                    height: .5em;
-                    background-color: gray;
-                    border-radius: 1em;
-                    top: 0;
-                    left: 0;
-                    z-index: 2;
-                }
-
-                &::-webkit-slider-thumb
-                {
-                    appearance: none;
-                    width: 1em;
-                    height: 1em;
-                    border-radius: 50%;
-                    background-color: gray;
-                    position: relative;
-                    z-index: 3;
-
-                    &:hover
-                    {
-                        background-color: darkgray;
-                    }
-                }
+                width: calc(100% - 12em);  
+                cursor: pointer;      
             }
 
             > .seekbar__display-time

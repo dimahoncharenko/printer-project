@@ -61,12 +61,6 @@ const Player = ({
     }, []);
 
     const onProgress = useCallback((currentState: ReactPlayerProps) => {
-        if (controlsRef.current) {
-            let range = controlsRef.current.querySelector<HTMLInputElement>(".seekbar__range");
-
-            range?.style.setProperty("--before-width", (+currentState.played * 50) + "%");
-        }
-
         if (count > 3 && controlsRef.current) {
             controlsRef.current.style.opacity = "0";
             count = 0;
@@ -84,12 +78,10 @@ const Player = ({
     }, []);
 
     const onChange = useCallback(({ target }: ChangeEvent<HTMLInputElement>) => {
-        target.style.setProperty("--before-width", target.value + "%");
         setState(state => ({ ...state, played: +target.value }));
     }, []); 
 
     const onMouseUp = useCallback(({ currentTarget }: MouseEvent<HTMLInputElement>) => {
-        currentTarget.style.setProperty("--before-width", currentTarget.value + "%");
         if (playerRef.current) {
             setState(state => ({ ...state, seeking: false }));
             playerRef.current.seekTo(+currentTarget.value);
