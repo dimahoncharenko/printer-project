@@ -160,22 +160,26 @@ const CSS = css`
                 position: absolute;
                 bottom: 1.5em;
                 left: calc(50% - 1em);
+                background-color: white;
+                border-radius: .3em;
+                overflow: hidden;
 
                 > div
                 {
-                    background-color: white;
                     color: black;
                     padding: .5em;
                     font-size: clamp(.7rem, 2vw + .1em, 1rem);
 
-                    &:hover
+                    &::nth-of-type(1), 
+                    &::nth-of-type(4) 
                     {
-                        background-color: #898989;
+                        border-radius: .3em;
                     }
 
+                    &:hover,
                     &.active
                     {
-                        background-color: #898989;
+                        background-color: hsla(0, 0%, 0%, .2);
                     }
                 }
             }
@@ -191,6 +195,7 @@ const CSS = css`
                 > .playback-rate__options
                 {
                     display: block;
+
                 }
             } 
         }
