@@ -1,11 +1,53 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { MouseEventHandler, ChangeEventHandler, forwardRef, ForwardedRef, Fragment } from "react";
+import { MouseEventHandler, ChangeEventHandler, forwardRef, ForwardedRef, Fragment } from "react";
 import { jsx, css } from "@emotion/react";
 import { HiPause, HiPlay, HiRewind, HiFastForward } from "react-icons/hi";
 import { FiVolume1, FiVolume2, FiVolumeX } from "react-icons/fi";
 import { AiOutlineFullscreen } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5"; 
+
+const fragment = `
+--thumb-size: 1em;
+--thumb-color: gray;
+--before-color: darkgray;
+--radius: .2em;
+
+position: relative;
+-webkit-appearance: none;
+cursor: pointer;
+height: .5em;
+border-radius: var(--radius); 
+
+&::-webkit-slider-thumb
+{
+    position: relative;
+    z-index: 2;
+    -webkit-appearance: none;
+    height: var(--thumb-size);
+    width: var(--thumb-size);
+    background-color: var(--thumb-color);
+    padding: 0;
+    border-radius: 50%;
+    transform: translateX(0em);
+
+    &:hover
+    {
+        box-shadow: 0em 0em .1em #090909, 0em 0em .1em #0d0d0d;
+    }
+}
+
+&::before
+{
+    position: absolute;
+    content: " ";
+    height: 100%;
+    width: var(--before-width);
+    background-color: var(--before-color);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+}
+`;
 
 const CSS = css`
     display: flex;
@@ -86,9 +128,10 @@ const CSS = css`
         }
 
         > .volume-range
-        {
-            cursor: pointer;
+        {   
+            --before-width: 50%;
             width: 20%;
+            ${fragment}
         }
 
         > .rewind,
@@ -131,47 +174,9 @@ const CSS = css`
 
             > .seekbar__range
             {
-                --thumb-size: 1em;
-                --thumb-color: gray;
                 --before-width: 0%;
-                --before-color: darkgray;
-                --radius: .2em;
-
-                -webkit-appearance: none;
-                position: relative;
                 width: calc(100% - 12em);  
-                cursor: pointer;
-                height: .5em;
-                border-radius: var(--radius); 
-                
-                &::-webkit-slider-thumb
-                {
-                    position: relative;
-                    z-index: 2;
-                    -webkit-appearance: none;
-                    height: var(--thumb-size);
-                    width: var(--thumb-size);
-                    background-color: var(--thumb-color);
-                    padding: 0;
-                    border-radius: 50%;
-                    transform: translateX(0em);
-
-                    &:hover
-                    {
-                        box-shadow: 0em 0em .1em #090909, 0em 0em .1em #0d0d0d;
-                    }
-                }
-
-                &::before
-                {
-                    position: absolute;
-                    content: " ";
-                    height: 100%;
-                    width: var(--before-width);
-                    background-color: var(--before-color);
-                    border-top-left-radius: var(--radius);
-                    border-bottom-left-radius: var(--radius);
-                }
+                ${fragment}
             }
 
             > .seekbar__display-time
@@ -252,9 +257,7 @@ type Props = {
     played: number
     onChange: ChangeEventHandler<HTMLInputElement>
     onMouseDown: () => any
-    // onMouseDown: MouseEventHandler<HTMLInputElement>
     onMouseUp: (arg: any) => any
-    // onMouseUp: MouseEventHandler<HTMLInputElement>
     displayTime: string
     title: string
     onMouseOver: MouseEventHandler<HTMLDivElement>

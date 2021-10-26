@@ -60,8 +60,9 @@ const Player = ({
         setState(state => ({ ...state, muted: !state.muted }));
     }, []);
 
-    const setVolume = useCallback(({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
-        setState(state => ({ ...state, volume: (+value / 100), muted: +value === 0 }));
+    const setVolume = useCallback(({ target }: ChangeEvent<HTMLInputElement>) => {
+        target.style.setProperty("--before-width", `${(+target.value / +target.max) * 100}%`);
+        setState(state => ({ ...state, volume: (+target.value / 100), muted: +target.value === 0 }));
     }, []);
 
     const onProgress = useCallback((currentState: ReactPlayerProps) => {
