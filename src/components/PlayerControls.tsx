@@ -251,8 +251,10 @@ type Props = {
     duration: number
     played: number
     onChange: ChangeEventHandler<HTMLInputElement>
-    onMouseDown: MouseEventHandler<HTMLInputElement>
-    onMouseUp: MouseEventHandler<HTMLInputElement>
+    onMouseDown: () => any
+    // onMouseDown: MouseEventHandler<HTMLInputElement>
+    onMouseUp: (arg: any) => any
+    // onMouseUp: MouseEventHandler<HTMLInputElement>
     displayTime: string
     title: string
     onMouseOver: MouseEventHandler<HTMLDivElement>
@@ -327,6 +329,8 @@ const PlayerControls = ({
                         value={played}
                         onChange={onChange}
                         onMouseDown={onMouseDown}
+                        onTouchStart={onMouseDown}
+                        onTouchEnd={onMouseUp}
                         onMouseUp={onMouseUp}
                     />
                     <span className="seekbar__display-time">{displayTime}</span>
