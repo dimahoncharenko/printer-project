@@ -8,11 +8,6 @@ import { AiOutlineFullscreen } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5"; 
 
 const fragment = `
---thumb-size: 1em;
---thumb-color: gray;
---before-color: darkgray;
---radius: .2em;
-
 position: relative;
 -webkit-appearance: none;
 cursor: pointer;
@@ -50,6 +45,12 @@ border-radius: var(--radius);
 `;
 
 const CSS = css`
+    --thumb-size: 1em;
+    --before-width: 0%;
+    --thumb-color: gray;
+    --before-color: darkgray;
+    --radius: .2em;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -174,7 +175,6 @@ const CSS = css`
 
             > .seekbar__range
             {
-                --before-width: 0%;
                 width: calc(100% - 12em);  
                 ${fragment}
             }
