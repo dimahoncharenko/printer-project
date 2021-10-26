@@ -81,9 +81,9 @@ function App() {
       <DealerSection printerPricing={printerPricing} inksPricing={inksPricing}/>
       <div id="service-centres"></div>
       <Tile><h2>Сервісні центри в Києві</h2></Tile>
-      <Wrapper>
+      {/* <Wrapper>
         <MapContainer/>
-      </Wrapper>
+      </Wrapper> */}
       <Footer/>
     </div>
   );
