@@ -131,8 +131,47 @@ const CSS = css`
 
             > .seekbar__range
             {
+                --thumb-size: 1em;
+                --thumb-color: gray;
+                --before-width: 0%;
+                --before-color: darkgray;
+                --radius: .2em;
+
+                -webkit-appearance: none;
+                position: relative;
                 width: calc(100% - 12em);  
-                cursor: pointer;      
+                cursor: pointer;
+                height: .5em;
+                border-radius: var(--radius); 
+                
+                &::-webkit-slider-thumb
+                {
+                    position: relative;
+                    z-index: 2;
+                    -webkit-appearance: none;
+                    height: var(--thumb-size);
+                    width: var(--thumb-size);
+                    background-color: var(--thumb-color);
+                    padding: 0;
+                    border-radius: 50%;
+                    transform: translateX(0em);
+
+                    &:hover
+                    {
+                        box-shadow: 0em 0em .1em #090909, 0em 0em .1em #0d0d0d;
+                    }
+                }
+
+                &::before
+                {
+                    position: absolute;
+                    content: " ";
+                    height: 100%;
+                    width: var(--before-width);
+                    background-color: var(--before-color);
+                    border-top-left-radius: var(--radius);
+                    border-bottom-left-radius: var(--radius);
+                }
             }
 
             > .seekbar__display-time

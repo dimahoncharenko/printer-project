@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useState, useCallback, useRef, ChangeEvent, MouseEvent } from "react";
+import React, { useState, useCallback, useRef, ChangeEvent, MouseEvent, useEffect } from "react";
 import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
 import { jsx, css } from "@emotion/react";
 import screenfull from "screenfull";
@@ -48,6 +48,10 @@ const Player = ({
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const controlsRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+
+    }, []);
+
     const togglePlay = useCallback(() => {
         setState(state => ({ ...state, playing: !state.playing}))
     }, []);
@@ -61,6 +65,14 @@ const Player = ({
     }, []);
 
     const onProgress = useCallback((currentState: ReactPlayerProps) => {
+        if (controlsRef.current) {
+            const range = controlsRef.current.querySelector<HTMLInputElement>(".seekbar__range");
+
+            if (range) {
+                range.style.setProperty("--before-width", `${currentState.played * 100}%`);
+            }
+        }
+
         if (count > 3 && controlsRef.current) {
             controlsRef.current.style.opacity = "0";
             count = 0;
@@ -78,6 +90,7 @@ const Player = ({
     }, []);
 
     const onChange = useCallback(({ target }: ChangeEvent<HTMLInputElement>) => {
+        target.style.setProperty("--before-width", `${(+target.value / +target.max) * 100}%`);
         setState(state => ({ ...state, played: +target.value }));
     }, []); 
 
