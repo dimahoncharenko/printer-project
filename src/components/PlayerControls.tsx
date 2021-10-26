@@ -175,7 +175,7 @@ const CSS = css`
 
             > .seekbar__range
             {
-                width: calc(100% - 12em);  
+                width: min(70%, 50em);  
                 ${fragment}
             }
 
